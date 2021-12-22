@@ -1,0 +1,360 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: #282b34;
+}
+
+.home__title {
+  margin: 0;
+  padding: 15px 0 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.home__header {
+  padding: 0 0 15px;
+  text-align: center;
+}
+
+.home__subtitle {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.home__logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__logout-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d85656;
+  cursor: pointer;
+}
+
+.home__crud {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.home__crud-form {
+  width: 100%;
+  height: 400px;
+  margin: 15px 0;
+  background-color: #2d343e;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.home__form-input {
+  height: 50px;
+  width: 80%;
+  text-decoration: none;
+  background-color: #404450;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.home__form-input:focus {
+  outline: none;
+}
+
+.home__form-button {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  width: 100px;
+  border: none;
+  background-color: #ffac41;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+.home__crud-list {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+
+.home__crud-list span{
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.home__crud-list table {
+  border: 0;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.home__crud-list thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.home__crud-list tr {
+  border-bottom: 3px solid #ddd;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+  display: block;
+  margin-bottom: .625em;
+}
+
+.home__crud-list th,
+.home__crud-list td {
+  padding: .625em;
+  text-align: center;
+}
+
+.home__crud-list td {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  font-size: .8em;
+  text-align: right;
+}
+
+.home__crud-list td::before {
+  content: attr(data-column);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home__crud-list:last-child {
+  border-bottom: 0;
+}
+
+.home__form-action {
+  padding: .5rem .5rem;
+  width: auto;
+  border: none;
+  background-color: #ffac41;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home__form-action.btn-delete {
+  background-color: rgba(216, 86, 86, .1);
+}
+
+.home__form-action.btn-update {
+  background-color: rgba(255, 172, 65, .1);
+}
+
+@media screen and (min-width: 968px) {
+  .home__crud {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .home__crud-form {
+    margin: 0;
+  }
+
+  .home__crud-list thead {
+    border: none;
+    clip: unset;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    width: auto;
+}
+
+.home__crud-list tr {
+  border-bottom: none;
+  display: table-row;
+  margin-bottom: 0;
+}
+
+.home__crud-list th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.home__crud-list td {
+  border-bottom: none;
+  display: table-cell;
+  font-size: unset;
+  text-align: center;
+}
+
+.home__crud-list td::before {
+  content: unset;
+}
+
+}
+
+/* Login form  */
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #282b34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.login__container {
+  width: 400px;
+  height: 400px;
+  background-color: #2d343e;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+.login__container a {
+  color: #ffac41;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.login__title, p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Muli",sans-serif;
+}
+
+.login__form-input {
+  height: 50px;
+  width: 80%;
+  text-decoration: none;
+  background-color: #404450;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.login__form-input:focus {
+  outline: none;
+}
+
+.login__form-button {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  width: 100px;
+  border: none;
+  background-color: #ffac41;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Register form  */
+.register {
+  width: 100%;
+  height: 100vh;
+  background-color: #282b34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.register__container {
+  width: 400px;
+  height: 400px;
+  background-color: #2d343e;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+.register__container a {
+  color: #ffac41;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.register__title, p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Muli",sans-serif;
+}
+
+.register__form-input {
+  height: 50px;
+  width: 80%;
+  text-decoration: none;
+  background-color: #404450;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.register__form-input:focus {
+  outline: none;
+}
+
+.register__form-button {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  width: 100px;
+  border: none;
+  background-color: #ffac41;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}

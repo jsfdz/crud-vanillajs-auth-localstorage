@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Vanilla JS Local Storage</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="home container">
+    <h1 class="home__title">📒 USER CRUD</h1>
+    
+    <div class="home__header">
+      <h2 class="home__subtitle">👋🏻 Welcome: <span id="user-name"></span></h2>
+      <div class="home__logout">
+        <button id="home-logout" class="home__logout-btn">🪧 Sign Out</button>
+      </div>
+    </div>
+
+    <div class="home__crud">
+      <div id="home-list" class="home__crud-list"></div>
+
+      <form id="home-form" class="home__crud-form">
+        <input class="home__form-input" type="text" id="home-name" name="name" placeholder="Name" required />
+
+        <input class="home__form-input" type="text" id="home-lastname" name="lastname" placeholder="Last Name" required />
+
+        <input class="home__form-input" type="email" name="email" id="home-email" placeholder="Email" required />
+
+        <input id="home-form-btn" class="home__form-button" type="submit" value="Add" />
+      </form>
+    </div>
+  </section>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
