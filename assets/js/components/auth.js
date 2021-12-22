@@ -3,11 +3,11 @@ export const auth = () => {
 
   //Proteger ruta
   if (!isAuth) {
-    if(window.location.pathname === '/index.html') {
+    if(window.location.pathname === '/index.html' || window.location.pathname === '/') {
       window.location.href = '/login.html'
     }
   } else {
-    if(window.location.pathname !== '/index.html') {
+    if(window.location.pathname !== '/index.html' || window.location.pathname === '/') {
       window.location.href = '/index.html'
     }
   }
